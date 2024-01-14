@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{%block content%}
+        
+        
+        
+        
+            <h3>Product list </h3>
+                <table class="table table-striped table-hover table-bordered">
+                  <thead class="table-dark">
+                    <tr>
+
+                     
+                      <th scope="col">Product name</th>
+                      <th scope="col">Product code</th>
+                      <th scope="col">Price</th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                {% if prod %}
+                  {% for list in prod %}
+                    <tr>
+                     
+                      <td>{{ list.product_name }}</td>
+                      <td>{{ list.product_code}}</td>
+                      <td>{{ list.price}}</td>
+                         </tr>
+                         {% endfor %}
+                         {% endif %}
+                
+
+        
+
+        
+ {% endblock %}
